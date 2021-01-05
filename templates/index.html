@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>My app</title>
+</head>
+<body>
+   <h1>Hey</h1> 
+   <img src={{url_for("static",filename="image.jpeg")}} width="400" height="400">
+   <ul>
+       {%for fruit in fruits%}
+            <li>{{fruit}}</li>
+        {% endfor %}
+   </ul>
+
+       {%if 'Mango' in fruits%}
+        <p>Mango exists in the list</p>
+       {% else %}
+        <p>Mango does not exists in the list</p>
+       {% endif %}
+</body>
+</html>
